@@ -1,0 +1,28 @@
+{
+  "name": "basic-user-system",
+  "version": "1.0.0",
+  "description": "Basic User System (Login and Registration)",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinishaJ/Basic-User-System.git"
+  },
+  "keywords": [
+    "login",
+    "registration",
+    "mongodb",
+    "express",
+    "nodejs",
+    "reactjs",
+    "full-stack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BinishaJ/Basic-User-System/issues"
+  },
+  "homepage": "https://github.com/BinishaJ/Basic-User-System#readme"
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
@@ -15,10 +16,15 @@ const Register = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    alert("Signup successful!");
-    navigate("/");
+    axios
+      .post("http://localhost:3500/api/users/register", values)
+      .then(() => {
+        alert("Signup successful!");
+        navigate("/");
+      })
+      .catch((error) => alert(error.response.data));
   };
 
   return (

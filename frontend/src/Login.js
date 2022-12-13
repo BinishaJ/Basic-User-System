@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "./styles.css";
 
 const Login = () => {
@@ -13,11 +14,20 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert("Login successful!");
-    setEmail("");
-    setPassword("");
+    const user = {
+      email: email,
+      password: password,
+    };
+    axios
+      .post("http://localhost:3500/api/users/login", user)
+      .then(() => {
+        alert("Login successful!");
+        setEmail("");
+        setPassword("");
+      })
+      .catch((error) => alert(error.response.data));
   };
 
   return (
