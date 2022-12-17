@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/BinishaJ/Basic-User-System/issues"
   },
-  "homepage": "https://github.com/BinishaJ/Basic-User-System#readme"
+  "homepage": "https://github.com/BinishaJ/Basic-User-System#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
